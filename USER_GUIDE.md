@@ -3,10 +3,10 @@
 The source `mat` file provides sounding ID, depth in metres, tip resistance `qc` (MPa), sleeve friction `fs` (MPa), WGS84 latitude/longitude, groundwater depth (m), and predrill depth (m). Main model target `y=log10(fs)` in MPa. Features are calculated from `qc`, depth, water and site coordinates only, but the `fs`-dependent target filter is used for evaluation and must be disclosed.
 
 ### Code outputs
-`src/features.py`: feature table and grouping labels (800 site groups at nominal 1 km DBSCAN spatial clustering).  
-`src/ml.py`: GroupKFold benchmark (five folds), model predictions and site-boostrap summaries.  
-`src/cqr.py`: original pointwise conformal calibration and diagnostic coverage.  
-`src/regionout_rf.py`: geographic holdouts without training on the held-out coordinate-defined region.  
+features.py`: feature table and grouping labels (800 site groups at nominal 1 km DBSCAN spatial clustering).  
+ml.py`: GroupKFold benchmark (five folds), model predictions and site-boostrap summaries.  
+cqr.py`: original pointwise conformal calibration and diagnostic coverage.  
+regionout_rf.py`: geographic holdouts without training on the held-out coordinate-defined region.  
 `site_aware_cqr.py`: 75/25 site-calibrated quantile models, score calibration at the depth-point level, 90th-percentile site level and site-maximum level.
 
 ### Output interpretation

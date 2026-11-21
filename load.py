@@ -2,7 +2,7 @@ import scipy.io as sio, numpy as np, pandas as pd
 from pathlib import Path
 import os
 
-MAT = os.environ.get('CPT_DATA_PATH', str(Path(__file__).resolve().parent.parent / 'dataset' / 'NorthAmerica_Dataset_V1.mat'))
+MAT = os.environ.get('CPT_DATA_PATH', str(Path(__file__).resolve().parent / 'dataset' / 'NorthAmerica_Dataset_V1.mat'))
 
 
 def load():
